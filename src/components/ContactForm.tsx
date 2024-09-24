@@ -28,9 +28,9 @@ const ContactForm = () => {
         body: JSON.stringify(formData),
       });
       const data = await response.json();
-      setSubmitMessage(data.message);
+      setSubmitMessage(data.message || 'Your message has been sent successfully!');
       setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
+    } catch {
       setSubmitMessage('An error occurred. Please try again.');
     }
     setIsSubmitting(false);
