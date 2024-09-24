@@ -35,6 +35,7 @@ landing-page/
 └── tsconfig.json
 
 
+
 ## Key Components and Files
 
 1. **src/app/layout.tsx**  
@@ -80,3 +81,12 @@ landing-page/
 ## Optimized Performance
 - **Dynamic Imports**: Uses Next.js dynamic imports for lazy loading components.
 - **Custom Document**: Optimizes the HTML structure for better SEO and performance.
+
+## Running the Application Locally
+To run the application locally:
+
+1. Make sure you're in the project directory.
+2. Run `npm install` to install all dependencies.
+3. Run `npm run dev` to start the development server.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+
