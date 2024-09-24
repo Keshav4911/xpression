@@ -8,8 +8,15 @@ const cors = Cors({
   optionsSuccessStatus: 200,
 });
 
+// Define the type for the middleware function
+type MiddlewareFunction = (
+  req: NextApiRequest,
+  res: NextApiResponse,
+  next: (result?: unknown) => void
+) => void;
+
 // Helper function to run middleware
-function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: Function) {
+function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: MiddlewareFunction) {
   return new Promise<void>((resolve, reject) => {
     fn(req, res, (result: unknown) => {
       if (result instanceof Error) {
